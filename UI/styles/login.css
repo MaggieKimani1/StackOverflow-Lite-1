@@ -1,5 +1,5 @@
 /*add css for form*/
-input[type=text] {
+input[type=text], input[type="password"] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -20,9 +20,17 @@ input[type=text] {
     cursor: pointer;
   }
   
+  #fpass {
+      float: right;
+  }
+  #fpass:hover{
+      color: #0872d6ef;
+  }
   
   div {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+    width: 45%;
+    margin: auto;
   }
