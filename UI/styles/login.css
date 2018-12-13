@@ -22,7 +22,6 @@ input[type=text], input[type="password"] {
   
   #fpass {
       float: right;
-      font-size: 80%;
   }
   #fpass:hover{
       color: #0872d6ef;
@@ -33,5 +32,8 @@ input[type=text], input[type="password"] {
     background-color: #f2f2f2;
     padding: 20px;
     width: 45%;
-    margin: auto;
+    /*margin: auto;*/
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
   }
