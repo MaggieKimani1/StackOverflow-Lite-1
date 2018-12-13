@@ -21,6 +21,7 @@ input[type=text], input[type="password"] {
   }
   
   #fpass {
+      font-size: 15px;
       float: right;
   }
   #fpass:hover{
