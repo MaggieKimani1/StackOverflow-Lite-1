@@ -3,10 +3,7 @@
 This is an Andela Bootcamp Challenge, the challenge is to create a mini-version of stack overflow.
 
 ## Summary
-The StackOverflow-lite allows a user to ask and answer questions. Any user registered or unregistered to the platform can view the question(s) on the platform. This platform will constitute of the following;
-
-1. API
-2. UI
+The StackOverflow-lite allows a user to ask and answer questions. Any user registered or unregistered to the platform can view the question(s) on the platform. This platform will constitute the UI
 
 ## Features
 1. User will register and login
