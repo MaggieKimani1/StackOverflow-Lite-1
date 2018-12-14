@@ -1,0 +1,91 @@
+.sidenav {
+    margin-top: 48px;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    border-right-style: solid;
+    border-right-color: #d6d9dc;
+    border-right-width: 1px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  .sidenav ul li a, .sidenav ul li ul li a {
+    padding: 6px 8px 6px 0px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #1f1e1e;
+    display: block;
+    left: 0;
+    margin: 0;
+  }
+  
+  .sidenav ul li a:hover {
+    color: #818181;
+  }
+  
+  .sidenav ul {
+      margin: 0;
+      left: 0;
+      list-style-type: none
+  }
+
+  .main {
+    margin-left: 200px;
+    width: 70%; /* Same as the width of the sidenav */
+    margin-top: 75px;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: 0px 10px;
+  }
+
+  .main .ask-question .post {
+      float: left;
+      width: 35%;
+  }
+  .main .ask-question {
+      width: 80%;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .format {
+      margin-left: 15px;
+      background-color: #FFF8DC;
+      border-color: #e6dfc6;
+      position: absolute;
+      top: 155px;
+      right: 20px;
+      margin-bottom: 100px;
+      border: 1px solid #d6d9dc;
+      border-radius: 3px;
+      width: 20%;
+      float: right;
+      display: inline-block;
+  }
+
+  .format h4 {
+      text-align: center;
+      border-bottom: #818181;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+  }
+
+  .format div ul{
+    padding: 6px 8px 6px 0px;
+    font-size: 15px;
+    color: #1f1e1e;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .format div ul li{
+    margin-left: 30px;
+    margin-bottom: 5px;
+  }
