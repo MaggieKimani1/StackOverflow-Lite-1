@@ -1,0 +1,81 @@
+.questions {
+    position: absolute;
+    top: 40px;
+    left: 240px;
+    width: 700px;
+    margin-bottom: 20px;
+    height: max-content;
+    overflow: auto;
+}
+
+.questions button{
+    width: 20%;
+    float: right;
+}
+
+.q-lists {
+    width: 100%;
+    margin-top: 15px;
+    border-top: 1px solid #d6d9dc;
+    overflow: auto;
+}
+
+.q-lists .calc {
+    width: 30%;
+    float: left;
+    position: relative;
+    top: 25px;
+}
+
+.calc .votes,.calc .answers,.calc .views {
+    width: 33.3%;
+    float: left;
+}
+
+.q-lists .summary{
+    width: 70%;
+    float: left;
+    position: relative;
+    top: 0;
+}
+
+.summary .tags{
+    width: auto;
+    float: left;
+}
+
+.summary .tags a{
+    display: inline-block;
+    padding: 2px;
+    font-size: 14px;
+    border-style: 1px solid #d6d9dc;
+    color: #39739d;
+    background-color: rgb(225, 236, 244);
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.summary h3 a{
+    color: #39739d;
+    text-decoration: none;
+}
+.summary h3 a:hover{
+    color: #4688b8;
+}
+
+.summary .tags a:hover{
+    background-color: #c3d8e7;
+}
+.summary .timestamp{
+    width: auto;
+    float: right;
+}
+
+.summary .timestamp{
+    color: #c6d3dd;
+    font-size: 15px;
+}
+
+.summary .timestamp #user:hover{
+    color:  #c3d8e7;
+}
