@@ -1,11 +1,4 @@
-.active {
-    color: #201e1e;
-    background-color: #dfd5d5;
-}
 
-.active:hover{
-    color: #201e1e !important;
-}
 
 .view-align{
     position: relative;
