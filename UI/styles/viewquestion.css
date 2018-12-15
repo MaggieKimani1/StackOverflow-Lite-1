@@ -1,0 +1,108 @@
+.active {
+    color: #201e1e;
+    background-color: #dfd5d5;
+}
+
+.active:hover{
+    color: #201e1e !important;
+}
+
+.view-align{
+    position: relative;
+    left: 240px;
+    top: 60px;
+}
+
+.view-align .viewquestion{ 
+    position: absolute;
+    margin-bottom: 20px;
+    width: 82%;
+}
+
+.view-align .viewquestion #title{
+    padding: 2px;
+    margin-top: 2em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d6d9dc;
+    height: 3.3em;
+}
+
+.view-align .viewquestion #title h2{
+    width: 84%;
+    float: left;
+    margin-top: 10px;
+}
+
+.view-align .viewquestion #title button{
+    width: auto !important;
+    float: right;
+    margin-right: 20px;
+}
+
+.view-align .viewquestion .question-body{
+    width: 80%;
+}
+
+.view-align .viewquestion .question-body .vote-q{
+    width: 15%;
+    float: left;
+}
+
+.view-align .viewquestion .question-body .body{
+    width: 85%;
+    /*position: relative;
+    right: 5px;*/
+    float: left;
+}
+
+.view-align .viewquestion .question-body .body .description-body{
+    width: auto;
+    float: left;
+}
+
+.view-align .viewquestion .question-body .body .tags{
+    float: left;
+    margin-top: 15px;
+}
+
+.view-align .viewquestion .question-body .body .user-q{
+    float: right;
+    margin-top: 12px;
+    width: 25%;
+    padding: 6px;
+    font-size: 13px;
+    background-color: rgb(225, 236, 244);
+    border-radius: 1px;
+
+    /*
+    color: #c6d3dd;
+    */
+}
+
+.view-align .viewquestion .question-body .body .user-q span{
+    margin-bottom: 4px;
+}
+
+.view-align .viewquestion .question-body .body .user-q #image{
+    width: auto;
+    float: left;
+    margin: 5px;
+}
+
+.view-align .viewquestion .question-body .body .user-q #username{
+    width: auto;
+    float: left;
+    margin: 5px;
+}
+
+.view-align .question-answer{
+    position: absolute;
+    top: 350px;
+    width: 65%;
+    border-top: 1px solid #d6d9dc;
+}
+
+.view-align .question-answer form input[type="submit"]{
+    width: 20%;
+    float: left;
+}
