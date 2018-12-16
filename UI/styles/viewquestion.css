@@ -1,9 +1,10 @@
 
 
 .view-align{
-    position: relative;
-    left: 240px;
-    top: 60px;
+    position: initial;
+    margin-left: 220px;
+    margin-top: 60px;
+    width: 95%;
 }
 
 .view-align .viewquestion{ 
@@ -91,6 +92,7 @@
 .view-align .question-answer{
     position: absolute;
     top: 350px;
+    margin-bottom: 20px;
     width: 65%;
     border-top: 1px solid #d6d9dc;
 }
