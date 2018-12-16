@@ -56,6 +56,10 @@ nav ul li a:hover {
   background-color: #ffffff;
 }
 
+nav ul li #login {
+  margin-right: 12px;
+ }
+
 .active {
   color: #201e1e;
   font-weight: bold;
