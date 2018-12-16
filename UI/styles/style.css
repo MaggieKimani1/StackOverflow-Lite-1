@@ -8,9 +8,11 @@ html {
 nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 2px;
   margin-bottom: 18px;
+  z-index: 1;
 }
 nav ul {
 
@@ -54,6 +56,10 @@ nav ul li a:hover {
   background-color: #ffffff;
 }
 
+nav ul li #login {
+  margin-right: 12px;
+ }
+
 .active {
   color: #201e1e;
   font-weight: bold;
@@ -95,4 +101,5 @@ footer {
   padding: 0;
   background-color: cornsilk;
   z-index: 2;
+  left: 0;
 }

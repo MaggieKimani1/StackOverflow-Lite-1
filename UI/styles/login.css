@@ -4,10 +4,16 @@
       font-size: 15px;
       float: right;
   }
-  #fpass:hover{
+  #fpass:hover, #freg:hover{
       color: #0872d6ef;
   }
   
+  #freg {
+      font-size: 15px;
+      float: left;
+      text-decoration: none;
+  }
+
   div {
     border-radius: 5px;
     background-color: #f2f2f2;

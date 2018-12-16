@@ -16,8 +16,8 @@
 
     <nav>
         <ul>
-            <li><img src="../images/so.svg" alt="so"><a href="#" id="logo" style="display:inline-block;">StackOverflow-lite</a></img></li>
-            <li style="float:right"><a class="active" href="#">Login</a></li>
+            <li><img src="../images/so.svg" alt="so"><a href="../templates/questions.html" id="logo" style="display:inline-block;">StackOverflow-lite</a></img></li>
+            <li style="float:right"><a id="login" href="../templates/login.html">Login</a></li>
         </ul>
     </nav>
 
@@ -25,7 +25,7 @@
     <div class="sidenav">
 
         <ul id="sidenav-list">
-            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">Home</a></li>
             <li><a href="#">Public</a></li>
             <ul>
                 <li><a href="#">StackOverflow</a></li>
@@ -39,7 +39,7 @@
     <div class="questions">
         <div>
             <h2>Top Questions</h2>
-            <button>Ask a question</button>
+            <button onclick="location.href='../templates/question.html'">Ask a question</button>
         </div>
         <div class="q-lists">
             <div class="calc">
@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="summary">
-                <h3><a href="#">How to set up Flask Python</a></h3>
+                <h3><a href="../templates/viewquestion.html">How to set up Flask Python</a></h3>
                 <div class="tags">
                     <a href="#">python</a>
                     <a href="#">flask</a>
