@@ -44,7 +44,7 @@
     float: left;
 }
 
-.summary .tags a{
+.summary .tags a, .view-align .viewquestion .question-body .body .tags a{
     display: inline-block;
     padding: 2px;
     font-size: 14px;

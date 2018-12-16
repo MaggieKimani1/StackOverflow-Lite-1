@@ -55,7 +55,13 @@ nav ul li a:hover {
 }
 
 .active {
-    margin-right: 15px;
+  color: #201e1e;
+  font-weight: bold;
+  background-color: rgba(12,13,14,0.05);
+}
+
+.active:hover{
+  color: #201e1e !important;
 }
 
 input[type=text], input[type="password"], textarea {

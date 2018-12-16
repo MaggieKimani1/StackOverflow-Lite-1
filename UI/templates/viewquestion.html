@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>StackOverflow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/question.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/viewquestion.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><img src="../images/so.svg" alt="so"><a href="questions.html" id="logo" style="display:inline-block;">StackOverflow-lite</a></img></li>
+            <li style="float:right"><a href="#">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="sidenav">
+
+        <ul id="sidenav-list">
+            <li><a href="questions.html">Home</a></li>
+            <li><a href="#">Public</a></li>
+            <ul>
+                <li><a href="#" class="active">StackOverflow</a></li>
+                <li><a href="#">Tags</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Jobs</a></li>
+            </ul>
+
+        </ul>
+    </div>
+    <div class="view-align">
+
+        <div class="viewquestion">
+            <div id="title">
+                <h2>How to set up Flask Python</h2>
+                <button onclick="location.href='question.html'">Ask Question</button>
+            </div>
+            <div class="question-body">
+                <div class="vote-q">
+                    <div><span>1</span></div>
+                    <div>Votes</div>
+                </div>
+                <div class="body">
+
+                    <div class="description-body">
+                        I have a project to do for after create a webpage that display the latest weather from my CSV
+                        file.
+
+                        I would like some details how to do it (don't really get the
+                        http://flask.pocoo.org/docs/installation/#installation installation setup)
+
+                        Can anyone mind explain me how to do it simply?
+
+                        Thanks.
+
+                        I'm running on Windows 7, with the Windows Powershell.
+                    </div>
+                    <div class="tags">
+                        <a href="#">python</a>
+                        <a href="#">flask</a>
+                    </div>
+                    <div class="user-q">
+                        <span>asked 40 sec ago</span>
+                        <div id="image">
+                            <img src="https://www.gravatar.com/avatar/2c13c5808f35a1088f82f66d052cdcde?s=32&d=identicon&r=PG&f=1"
+                                alt="user-photo" />
+                        </div>
+                        <div id="username"><a href="#">Saruk_op</a></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="question-answer">
+            <form>
+                <label for="body"><h3>Your Answer</h3></label>
+                <textarea cols="92" rows="15" tabindex="101" title="Describe the Question"></textarea>
+                <input type="submit" value="Post Answer" />
+            </form>
+
+        </div>
+    </div>
+
+    <footer>
+        Copyright 2018
+    </footer>
+</body>
+
+</html>
