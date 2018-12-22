@@ -1,7 +1,11 @@
 from flask import request, jsonify, abort, make_response
+from flask import Blueprint
+
 from ..models.UserModel import users,User
 from ..utils.validator import password_match
-from . import auth
+
+
+auth = Blueprint('auth',__name__, url_prefix='/api/v1')
 
 @auth.route('/register', methods=['POST'])
 def register():
