@@ -1,5 +1,3 @@
-from werkzeug.security import generate_password_hash, check_password_hash
-
 #global variable
 users =[]
 
@@ -10,13 +8,7 @@ class User(object):
         self.user_id = len(users)+1
         self.email = email
         self.username = username
-        self.set_password(password)
-
-    def set_password(self,password):
-        self.password_hash = generate_password_hash(password)
-
-    def check_password(self, passwd_hash, password):
-        return check_password_hash(passwd_hash,password)
+        self.password_hash = password
 
     def add_user(self):
         user = {
