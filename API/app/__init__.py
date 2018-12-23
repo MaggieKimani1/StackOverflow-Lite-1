@@ -7,7 +7,7 @@ from instance.config import app_config
 def create_app(config_name):
     '''Creating app, setting up configurations to run the app'''
     app = Flask(__name__,instance_relative_config=True)
-    
+    app.config['JSON_SORT_KEYS'] = False #Not sort return data
     if not config_name:
         app.config.from_object(app_config['development'])
     else:
