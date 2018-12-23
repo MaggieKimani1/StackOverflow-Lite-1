@@ -20,8 +20,8 @@ def register():
         if password_match(password, confirm_password):
             '''Add user to the data structure'''
             pswdhash = set_password(password)
-            user = User(email,username,pswdhash)
-            response =jsonify(user.add_user())
+            user = User(email,username,pswdhash).add_user()
+            response =jsonify(user)
 
             response.status_code = 201
             return response
@@ -40,8 +40,7 @@ def login():
         username = data['username']
         password = data['password']
 
-        user = User()
-        find_usr = user.find_user(username)
+        find_usr = User().find_user(username)
         if find_usr:
             '''Check password match'''
             if check_password(find_usr['password'],password):
