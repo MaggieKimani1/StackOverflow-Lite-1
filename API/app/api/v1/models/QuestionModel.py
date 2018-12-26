@@ -35,6 +35,7 @@ class Question(object):
             question["title"] = question_update["title"]
             question["body"] = question_update["body"]
             question["tags"]  = question_update["tags"]
+            question["answered"] = question_update["answered"]
 
             questions[index] = question
             return question
