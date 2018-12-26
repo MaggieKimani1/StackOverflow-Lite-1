@@ -1,4 +1,4 @@
-from flask import request, jsonify, abort, make_response
+from flask import request, jsonify, abort, make_response, session
 from flask import Blueprint
 
 from ..models.UserModel import users,User
@@ -21,6 +21,8 @@ def register():
             '''Add user to the data structure'''
             pswdhash = set_password(password)
             user = User(email,username,pswdhash).add_user()
+
+            session['userid'] = user['userid']
             response =jsonify(user)
 
             response.status_code = 201
@@ -44,6 +46,8 @@ def login():
         if find_usr:
             '''Check password match'''
             if check_password(find_usr['password'],password):
+                if not session.get('userid'):
+                    session['userid'] = find_usr['userid']
                 return make_response(jsonify({"message":"Successfully Logged In"}),200)
             else:
                 abort(make_response(jsonify({"message":"Invalid Password"}),400))

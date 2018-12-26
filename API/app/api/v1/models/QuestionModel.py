@@ -1,21 +1,26 @@
 import uuid
+from datetime import datetime
 
 questions = []
 
 class Question(object):
     """This class represents the Model for Question(s)"""
-    def __init__(self,questiontitle = '', questionbody = '', questiontags = []):
+    def __init__(self,questiontitle = '', questionbody = '', questiontags = [], userid= ''):
         self.questionid = uuid.uuid4().hex
         self.questiontitle = questiontitle
         self.questionbody = questionbody
         self.questiontags = questiontags
+        self.userid = userid
+        self.timestamp = datetime.now()
 
     def add_question(self):
         question = {
             "questionid": self.questionid,
             "title": self.questiontitle,
             "body": self.questionbody,
-            "tags":self.questiontags
+            "tags":self.questiontags,
+            "userid":self.userid,
+            "time":self.timestamp
         }
         #Add to list
         questions.append(question)

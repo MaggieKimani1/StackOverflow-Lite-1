@@ -32,10 +32,11 @@ def post_question():
         data = request.get_json()
         title = data['title']
         body = data['body']
-        tags = data['tags']    
+        tags = data['tags']
+        userid = session.get('userid')    
         #add items
         try:
-            question = Question(title,body,tags).add_question()
+            question = Question(title,body,tags,userid).add_question()
             response = jsonify(question)
             response.status_code = 201
             return response

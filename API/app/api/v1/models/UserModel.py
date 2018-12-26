@@ -1,3 +1,4 @@
+import uuid
 #global variable
 users =[]
 
@@ -5,7 +6,7 @@ class User(object):
     '''This class initializes User Model and Stores User Credential'''
     
     def __init__(self, email=None, username=None, password=None):
-        self.user_id = len(users)+1
+        self.user_id = uuid.uuid4().hex
         self.email = email
         self.username = username
         self.password_hash = password
@@ -18,7 +19,7 @@ class User(object):
             "password":self.password_hash
         }
         users.append(user)
-        return users
+        return user
 
     def get_users(self):
         return users
