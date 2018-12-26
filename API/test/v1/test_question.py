@@ -18,7 +18,8 @@ class QuestionTestCase(unittest.TestCase):
                             'questionid':'026df872f9ca443187b70c0bca04123f',
                             'title':'No Module found error',
                             'body':'I am trying to run the my flask app but i keep getting No Module found error',
-                            'tags':['python3', 'flask']
+                            'tags':['python3', 'flask'],
+                            'userid':'9cd21d4b9215444d9dbcc70bd0d9d2b1'
                         }
                     )
 
@@ -79,5 +80,10 @@ class QuestionTestCase(unittest.TestCase):
         self.assertEqual(response_json.status_code, 404)
         self.assertIn('Not found', str(response_json.data))
 
+    def test_user_questions_ok(self):
+        response_json = self.client.get('/api/v1/userquestions/9cd21d4b9215444d9dbcc70bd0d9d2b1')
+        self.assertEqual(response_json.status_code,200)
+        self.assertEqual(type(json.loads(response_json.data)),list)
+    
     def tearDown(self):
         questions.pop()

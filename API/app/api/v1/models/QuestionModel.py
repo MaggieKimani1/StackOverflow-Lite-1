@@ -5,13 +5,14 @@ questions = []
 
 class Question(object):
     """This class represents the Model for Question(s)"""
-    def __init__(self,questiontitle = '', questionbody = '', questiontags = [], userid= ''):
+    def __init__(self,questiontitle = '', questionbody = '', questiontags = [], userid= '', answered = False):
         self.questionid = uuid.uuid4().hex
         self.questiontitle = questiontitle
         self.questionbody = questionbody
         self.questiontags = questiontags
         self.userid = userid
         self.timestamp = datetime.now()
+        self.answered = answered
 
     def add_question(self):
         question = {
@@ -20,7 +21,8 @@ class Question(object):
             "body": self.questionbody,
             "tags":self.questiontags,
             "userid":self.userid,
-            "time":self.timestamp
+            "time":self.timestamp,
+            "answered":self.answered
         }
         #Add to list
         questions.append(question)
@@ -54,3 +56,11 @@ class Question(object):
     
     def get_questions(self):
         return questions
+
+    def find_user_questions(self, userid: str):
+        userquestions = []
+        for question in questions:
+            if question['userid'] == userid:
+                userquestions.append(question)
+
+        return userquestions

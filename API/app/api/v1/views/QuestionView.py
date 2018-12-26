@@ -24,6 +24,12 @@ def get_all():
     response.status_code = 200
     return response
 
+@ques.route('/userquestions/<id>', methods=['GET'])
+def get_user_questions(id: str):
+    response = jsonify(Question().find_user_questions(id))
+    response.status_code = 200
+    return response
+
 @ques.route('/question', methods=['POST'])
 def post_question():
     '''POST a question'''
