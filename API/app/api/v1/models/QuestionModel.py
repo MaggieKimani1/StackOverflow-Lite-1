@@ -1,9 +1,10 @@
 import uuid
 
 questions = []
+
 class Question(object):
     """This class represents the Model for Question(s)"""
-    def __init__(self,questiontitle: str, questionbody: str, questiontags: list):
+    def __init__(self,questiontitle = '', questionbody = '', questiontags = []):
         self.questionid = uuid.uuid4().hex
         self.questiontitle = questiontitle
         self.questionbody = questionbody
@@ -20,10 +21,10 @@ class Question(object):
         questions.append(question)
         return question
 
-    def update_question(self,questionid: str,question_update: dict):
+    def update_question(self,questionid: str,question_update):
         #find the question
         index, question = self.find_question(questionid)
-        if question:
+        if iter(question):
             question["title"] = question_update["title"]
             question["body"] = question_update["body"]
             question["tags"]  = question_update["tags"]
@@ -39,7 +40,12 @@ class Question(object):
             return True
 
     def find_question(self,questionid: str):
-        for index,question in enumerate(questions):
-            if question["questionid"] == questionid:
-                return index, question
+        if iter(questions):
+            for index,question in enumerate(questions):
+                if question["questionid"] == questionid:
+                    return index, question
+        else:
+            return None, None
     
+    def get_questions(self):
+        return questions
