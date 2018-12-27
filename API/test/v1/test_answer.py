@@ -15,7 +15,8 @@ class AnswerTestCase(unittest.TestCase):
                         "body": "Your error output lists 'connectionURI' with lowercase 'c' as invalid choice, while it also says choose from 'ConnectionURI'"+
                                  "with capital letter 'C'.Fix: Call your test with: ./argstest.py ConnectionURI oslo Maybe you should start simple (without subparsers) and build from there:",
                         "userid": '549a464020fc4e4bb0bb5f51aec9268f',
-                        "votes": 2
+                        "votes": 2,
+                        "isapproved":'false'
                     }
         questions.append(
                         {
