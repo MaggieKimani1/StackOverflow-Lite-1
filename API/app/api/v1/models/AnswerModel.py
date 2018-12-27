@@ -1,12 +1,15 @@
 import uuid
 from datetime import datetime
+from .QuestionModel import Question
 
 answers = []
-class Answer(object):
+class Answer(Question):
     
     '''This is the Answer Model, handles CRUD operations for Answers'''
 
     def __init__(self, questionid, answerbody= '', userid = '', votes = 0, isapproved = False ):
+        super().__init__(self)
+
         self.answerid = uuid.uuid4().hex
         self.questionid = questionid
         self.body = answerbody
