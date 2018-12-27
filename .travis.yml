@@ -15,7 +15,7 @@
   
   env: 
     - APP_SETTINGS='testing'
-    - SECRET='b I\xb4\x14\xa6\xb2b\xc41SP\xe7\xd5\xd9\x89\xd0\xd7'
+    - SECRET='I\xb4\x14\xa6\xb2b\xc41SP\xe7\xd5\xd9\x89\xd0\xd7'
   script:
     - pytest
 
