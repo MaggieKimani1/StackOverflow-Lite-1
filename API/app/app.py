@@ -19,10 +19,8 @@ def create_app(config_name):
         app.config.from_object(app_config[config_name])
 
     app.config['SESSION_TYPE'] = 'memcached'
-<<<<<<< HEAD
+
     app.secret_key = 'I\xb4\x14\xa6\xb2b\xc41SP\xe7\xd5\xd9\x89\xd0\xd7'
-=======
->>>>>>> b4e74942fd4c069bd24918b4aadb05047a8f841e
     app.config.from_pyfile('config.py',silent=True)
 
     app.register_blueprint(auth)
