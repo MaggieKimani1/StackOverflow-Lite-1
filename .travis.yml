@@ -1,9 +1,5 @@
   language: python
   
-  branches:
-    only:
-      - develop
-
   python:
     - "3.6"
 
