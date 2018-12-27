@@ -7,12 +7,18 @@
   python:
     - "3.6"
 
+  before_install:
+    - cd API
+
   install:
     - pip install -r requirements.txt
   
   env: 
     - APP_SETTINGS='testing'
     
+  before_script:
+    - cd API
+
   script:
     - pytest
 
