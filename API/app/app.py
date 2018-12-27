@@ -1,3 +1,4 @@
+import os
 import datetime
 from flask import Flask
 from flask import Session
@@ -20,7 +21,7 @@ def create_app(config_name):
 
     app.config['SESSION_TYPE'] = 'memcached'
 
-    app.secret_key = 'I\xb4\x14\xa6\xb2b\xc41SP\xe7\xd5\xd9\x89\xd0\xd7'
+    app.secret_key = os.getenv('SECRET')
     app.config.from_pyfile('config.py',silent=True)
 
     app.register_blueprint(auth)
