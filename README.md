@@ -1,4 +1,7 @@
 # STACKOVERFLOW-LITE API
+
+[![Build Status](https://travis-ci.org/j0nimost/StackOverflow-Lite.svg?branch=develop)](https://travis-ci.org/j0nimost/StackOverflow-Lite)
+
 This is an Andela challenge to create an API based on Python data structures and OOP. This project is 
 set to prepare us during Pre-bootcamp, we are expected to harness the lessons we've had to build this API
 this includes;
@@ -6,7 +9,8 @@ this includes;
 2. Git Version Control
 3. Python data structures
 4. OOP
- 
+
+
 ## Getting Started
 The API Project runs on flask and requires a number of set ups to get started;
 
