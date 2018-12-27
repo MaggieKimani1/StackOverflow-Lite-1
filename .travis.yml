@@ -16,9 +16,6 @@
   env: 
     - APP_SETTINGS='testing'
     
-  before_script:
-    - cd API
-
   script:
     - pytest
 
