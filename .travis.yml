@@ -14,8 +14,8 @@
     - pip install -r requirements.txt
   
   env: 
-    - APP_SETTINGS='testing'
     - SECRET='I\xb4\x14\xa6\xb2b\xc41SP\xe7\xd5\xd9\x89\xd0\xd7'
+    - APP_SETTINGS='testing'
   script:
     - pytest
 
