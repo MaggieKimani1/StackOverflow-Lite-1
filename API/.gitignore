@@ -8,5 +8,6 @@ __init__.pyc
 .pytest_cache
 
 .vscode
+.vscode/
 
 *.pyc
