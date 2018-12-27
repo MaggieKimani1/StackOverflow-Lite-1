@@ -60,7 +60,6 @@ def put_question(id: str):
         try:
             #update
             question = Question().update_question(id,data)
-
             response = jsonify(question)
             response.status_code = 202
             return response
