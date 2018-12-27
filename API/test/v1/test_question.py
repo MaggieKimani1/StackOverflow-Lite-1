@@ -5,6 +5,7 @@ from app.api.v1.models.QuestionModel import Question, questions
 
 class QuestionTestCase(unittest.TestCase):
     """This is Test Class for the Questions View"""
+    questionid = ''
     def setUp(self):
         self.app = create_app(config_name='testing')
         self.client = self.app.test_client()
@@ -19,7 +20,8 @@ class QuestionTestCase(unittest.TestCase):
                             'title':'No Module found error',
                             'body':'I am trying to run the my flask app but i keep getting No Module found error',
                             'tags':['python3', 'flask'],
-                            'userid':'9cd21d4b9215444d9dbcc70bd0d9d2b1'
+                            'userid':'9cd21d4b9215444d9dbcc70bd0d9d2b1',
+                            'answered': 'false'
                         }
                     )
 
@@ -52,6 +54,7 @@ class QuestionTestCase(unittest.TestCase):
         question_update = questions[0]
         question_update['title'] = 'Flask Error: No Module was found'
         response_json = self.client.put('/api/v1/question/026df872f9ca443187b70c0bca04123f', data=json.dumps(question_update), content_type='application/json')
+        print(response_json.data)
         self.assertEqual(response_json.status_code, 202)
         response_data = json.loads(response_json.data)
         self.assertEqual(response_data['title'], question_update['title'])
