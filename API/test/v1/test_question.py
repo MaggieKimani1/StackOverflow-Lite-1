@@ -5,7 +5,6 @@ from app.api.v1.models.QuestionModel import Question, questions
 
 class QuestionTestCase(unittest.TestCase):
     """This is Test Class for the Questions View"""
-    questionid = ''
     def setUp(self):
         self.app = create_app(config_name='testing')
         self.client = self.app.test_client()
@@ -54,7 +53,6 @@ class QuestionTestCase(unittest.TestCase):
         question_update = questions[0]
         question_update['title'] = 'Flask Error: No Module was found'
         response_json = self.client.put('/api/v1/question/026df872f9ca443187b70c0bca04123f', data=json.dumps(question_update), content_type='application/json')
-        print(response_json.data)
         self.assertEqual(response_json.status_code, 202)
         response_data = json.loads(response_json.data)
         self.assertEqual(response_data['title'], question_update['title'])
@@ -70,7 +68,6 @@ class QuestionTestCase(unittest.TestCase):
         question_update = questions[0]
         question_update['title'] = 'Flask Error: No Module was found'
         response_json = self.client.put('/api/v1/question/026df872f9ca443187b70c0bca04000t', data=json.dumps(question_update), content_type='application/json')
-        print(response_json.data)
         self.assertEqual(response_json.status_code, 404)
         self.assertIn('Not Found', str(response_json.data))
 
