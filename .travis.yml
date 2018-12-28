@@ -1,3 +1,6 @@
+  notification:
+      email: false
+
   language: python
   
   python:
@@ -14,6 +17,8 @@
     - APP_SETTINGS='testing'
   script:
     - pytest
+
+  
 
   
 
