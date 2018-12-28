@@ -2,8 +2,11 @@ import os
 import datetime
 from flask import Flask
 from flask import Session
+
 from .api.v1.views.UserView import auth
 from .api.v1.views.QuestionView import ques
+from .api.v1.views.AnswerView import ans
+
 from instance.config import app_config
 
 """This is the main app set up"""
@@ -26,6 +29,7 @@ def create_app(config_name):
 
     app.register_blueprint(auth)
     app.register_blueprint(ques)
+    app.register_blueprint(ans)
     
     app.permanent_session_lifetime = datetime.timedelta(minutes=1)
     return app
