@@ -20,7 +20,8 @@ class QuestionTestCase(unittest.TestCase):
                             'body':'I am trying to run the my flask app but i keep getting No Module found error',
                             'tags':['python3', 'flask'],
                             'userid':'9cd21d4b9215444d9dbcc70bd0d9d2b1',
-                            'answered': 'false'
+                            'answered': 'false',
+                            "answers":[]
                         }
                     )
 

@@ -25,13 +25,15 @@ class AnswerTestCase(unittest.TestCase):
                             'body':'I am trying to run the my flask app but i keep getting No Module found error',
                             'tags':['python3', 'flask'],
                             'userid':'9cd21d4b9215444d9dbcc70bd0d9d2b1',
-                            'answered': 'false'
+                            'answered': 'false',
+                            'answers':['972912aa4d5f44e0a489cb208ebb6c2d']
                         }
                     )
 
 
     def test_answer_post_ok(self):
         response = self.client.post('/api/v1/answer/6b49554bf5eb4a31a04ed6cf20f38ad6', data=json.dumps(self.answer), content_type='application/json')
+        print(response.data)
         self.assertEqual(response.status_code, 201)
         self.assertIn('6b49554bf5eb4a31a04ed6cf20f38ad6', str(response.data))
         self.assertEqual(type(json.loads(response.data)), dict)
