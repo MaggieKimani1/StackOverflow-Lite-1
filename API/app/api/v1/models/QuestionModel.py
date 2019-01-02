@@ -32,6 +32,7 @@ class Question(object):
         questions.append(question)
         return question
 
+    @classmethod
     def update_question(self,questionid: str,question_update):
         '''Updates Question Expects questionid and question_update of type list'''
         index, question = self.find_question(questionid)
@@ -43,14 +44,18 @@ class Question(object):
             question["answers"] = question_update["answers"]
             questions[index] = question
             return question
+        return None
 
+    @classmethod
     def delete_question(self, questionid: str):
-        #find question
+        '''Deletes Question Expects questionid returns Bool result'''
         index, _ =  self.find_question(questionid)
         if index:
             questions.pop(index)
             return True
-
+        return False
+    
+    @classmethod
     def find_question(self,questionid: str):
         '''Finds Question expects questionid of type str
             returns question of type list or None tuple
@@ -61,9 +66,11 @@ class Question(object):
                     return index, question
         return None,None
     
+    @classmethod
     def get_questions(self):
         return questions
 
+    @classmethod
     def find_user_questions(self, userid: str):
         userquestions = []
         for question in questions:
