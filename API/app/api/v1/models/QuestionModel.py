@@ -5,6 +5,9 @@ questions = []
 
 class Question(object):
     """This class represents the Model for Question(s)"""
+
+    answers = []
+
     def __init__(self,questiontitle = '', questionbody = '', questiontags = [], userid= '', answered = False):
         self.questionid = uuid.uuid4().hex
         self.questiontitle = questiontitle
@@ -22,21 +25,22 @@ class Question(object):
             "tags":self.questiontags,
             "userid":self.userid,
             "time":self.timestamp,
-            "answered":self.answered
+            "answered":self.answered,
+            "answers": self.answers
         }
         #Add to list
         questions.append(question)
         return question
 
     def update_question(self,questionid: str,question_update):
-        #find the question
+        '''Updates Question Expects questionid and question_update of type list'''
         index, question = self.find_question(questionid)
         if iter(question):
             question["title"] = question_update["title"]
             question["body"] = question_update["body"]
             question["tags"]  = question_update["tags"]
             question["answered"] = question_update["answered"]
-
+            question["answers"] = question_update["answers"]
             questions[index] = question
             return question
 
@@ -48,12 +52,14 @@ class Question(object):
             return True
 
     def find_question(self,questionid: str):
+        '''Finds Question expects questionid of type str
+            returns question of type list or None tuple
+        '''
         if iter(questions):
             for index,question in enumerate(questions):
                 if question["questionid"] == questionid:
                     return index, question
-        else:
-            return None, None
+        return None,None
     
     def get_questions(self):
         return questions

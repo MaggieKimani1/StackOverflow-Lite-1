@@ -8,6 +8,7 @@ class Answer(Question):
     '''This is the Answer Model, handles CRUD operations for Answers'''
 
     def __init__(self, questionid, answerbody= '', userid = '', votes = 0, isapproved = False ):
+        '''Initializer Expects questionid'''
         super().__init__(self)
 
         self.answerid = uuid.uuid4().hex
@@ -19,7 +20,7 @@ class Answer(Question):
         self.timestamp = datetime.now()
 
     def add_answers(self):
-        # add answers
+        '''adds the Answer to th data structure'''
         answer = {
                     self.questionid:
                     {
@@ -33,3 +34,9 @@ class Answer(Question):
                 }
         answers.append(answer)
         return answer
+
+    def add_answer_to_question(self, ques: list):
+        '''Expects provided with question list'''
+        ques["answers"].append(self.answerid)
+        update_ques = super().update_question(ques["questionid"], ques)
+        return update_ques
